@@ -111,6 +111,7 @@ button:hover{box-shadow: 2px 2px 5px 1px #343a40}
     top: 2%;
     resize: none;
     border-radius: 15px;
+    
 }
 textarea{
     outline: none;

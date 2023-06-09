@@ -7,7 +7,7 @@ oculto.style.display = "";
 
 function validarTxt(){
     let textoEs = document.querySelector(".text-ingres").value;
-    let vali = textoEs.match(/^[a-z]*$/);
+    let vali = textoEs.match(/^[a-z && " "]*$/);
     if(!vali || vali === 0){
         alert("Sólo letras minúsculas y sin acentos.");
         location.reload();
@@ -42,7 +42,7 @@ function buttonDesencriptar(){
 }
 
 function encriptar(mensajeEncriptado){
-    let codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    let codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"], [" ", " "]];
     mensajeEncriptado = mensajeEncriptado.toLowerCase();
     for (let i = 0; i < codigo.length; i++){
         if(mensajeEncriptado.includes(codigo[i][0])){
@@ -53,7 +53,7 @@ function encriptar(mensajeEncriptado){
 }
 
 function desencriptar(mensajeDesencriptado){
-    let codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    let codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"], [" ", " "]];
     mensajeDesencriptado = mensajeDesencriptado.toLowerCase();
     for(let i = 0; i<codigo.length; i++){
         if(mensajeDesencriptado.includes(codigo[i][1])){
